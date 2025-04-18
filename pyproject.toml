@@ -1,0 +1,32 @@
+[project]
+name = "torchrec-lightning-example"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fbgemm-gpu>=1.1.0",
+    "jsonargparse[signatures]>=4.37.0",
+    "lightning>=2.5.0.post0",
+    "onnx>=1.17.0",
+    "onnxruntime>=1.21.0",
+    "onnxscript>=0.2.2",
+    "pandas>=2.2.3",
+    "scikit-learn>=1.6.1",
+    "torch>=2.6.0",
+    "torchmetrics>=1.0.3",
+    "torchrec>=1.1.0",
+]
+
+[project.scripts]
+torchrec-lightning-example = "torchrec_lightning_example.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.11.0",
+    "tensorboard>=2.19.0",
+]
